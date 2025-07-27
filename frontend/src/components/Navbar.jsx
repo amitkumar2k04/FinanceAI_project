@@ -38,7 +38,6 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-blur-md shadow z-50"
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
-        {/* Clicking the brand returns to the home route without a full reload */}
         <Link to="/" className="text-2xl font-bold text-indigo-600">
           FinTrackAI
         </Link>
@@ -46,7 +45,6 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li key={link.label}>
               {link.external ? (
-                // Use React Router's Link component for route navigation
                 <Link
                   to={link.href}
                   className="hover:text-indigo-600 transition-colors"

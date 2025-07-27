@@ -2,11 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-/**
- * StatisticsSection provides quantitative proof points to build user trust.
- * Each statistic animates from 0 to its target number when scrolled into
- * view.  The numbers and labels can be customized via the stats array.
- */
 const stats = [
   { value: 10234, label: 'Questions Answered' },
   { value: 5234, label: 'Budgets Tracked' },
@@ -22,7 +17,6 @@ const StatisticsSection = () => {
     const ctx = gsap.context(() => {
       numberRefs.current.forEach((el, index) => {
         const target = stats[index].value;
-        // Animate numbers from 0 to target
         gsap.fromTo(
           el,
           { innerText: 0 },

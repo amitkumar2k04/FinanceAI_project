@@ -2,36 +2,19 @@ import React from 'react';
 import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
 
-/**
- * HeroSection presents the main heading and tagline for the personal
- * finance assistant.  It uses a gradient background and a call‑to‑action
- * link that anchors down to the chat box.  By isolating this into its own
- * component we allow future tweaks (e.g. swapping illustrations or adding
- * animations) without cluttering the root component.  Heroicons provide
- * lightweight vector icons that integrate seamlessly with Tailwind.
- */
+
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-/**
- * HeroSection renders a marketing header with a call‑to‑action button.
- * In this iteration we convert the CTA into a route change.  When the
- * "Start Chatting" button is clicked the user is navigated to the
- * `/chat` route.  Using `useNavigate` decouples the hero from any
- * stateful chat logic; routing concerns are handled by React Router
- * instead of passing down a callback.
- */
+
 const HeroSection = () => {
-  // Acquire the navigate function from react‑router to perform imperative navigation.
   const navigate = useNavigate();
-  // Create refs for elements we want to animate
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
   const subheadingRef = useRef(null);
   const ctaRef = useRef(null);
 
   useEffect(() => {
-    // Animate hero elements when the component mounts
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
         opacity: 0,
@@ -72,10 +55,6 @@ const HeroSection = () => {
         <a
           ref={ctaRef}
           href="/chat"
-          // Intercept the click to perform client‑side navigation instead of a
-          // full page reload.  `preventDefault` stops the anchor from
-          // performing its default action, then we call `navigate` to
-          // transition to the chat route.  GSAP hover effects remain intact.
           onClick={(e) => {
             e.preventDefault();
             navigate('/chat');

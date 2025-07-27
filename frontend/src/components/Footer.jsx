@@ -1,12 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-/**
- * A simple footer that provides additional navigation and copyright
- * information.  It stays at the bottom of the page and complements the
- * minimalistic design aesthetic of the site.  You can extend this
- * component with social icons or legal links as needed.
- */
+
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200 py-6 px-4">

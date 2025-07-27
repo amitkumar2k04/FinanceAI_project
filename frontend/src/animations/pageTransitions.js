@@ -20,11 +20,6 @@ export function pageEnterFromRight(el, opts = {}) {
 }
 
 /**
- * Animate a page element exiting to the left.  This helper slides the
- * element off the screen while fading it out.  It returns a GSAP
- * timeline; callers should await completion before navigating away if
- * they want to ensure the animation finishes.
- *
  * @param {HTMLElement} el The DOM element to animate
  * @param {Object} opts Optional overrides for duration and easing
  */

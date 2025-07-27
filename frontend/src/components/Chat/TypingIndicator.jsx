@@ -1,13 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { animateTypingIndicator } from '../../animations/chatAnimations.js';
 
-/**
- * TypingIndicator renders three bouncing dots to indicate that the
- * assistant is composing a reply.  GSAP is used to stagger the
- * bounce animations for a natural effect.  The animation runs on a
- * loop until the component unmounts.  Cleanup is handled
- * automatically by killing the timeline in the effect's cleanup.
- */
+
 function TypingIndicator() {
   const dotRefs = useRef([]);
 

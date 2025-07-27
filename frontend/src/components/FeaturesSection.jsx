@@ -7,13 +7,6 @@ import {
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-/**
- * A list of highlight features for the assistant.  This section enumerates
- * the core value propositions to encourage user engagement.  Each item
- * includes an icon, title and description.  Future additions or edits can
- * be done by modifying the `features` array.  The grid layout adapts
- * automatically to screen size via Tailwind’s responsive grid classes.
- */
 const features = [
   {
     title: 'Smart Budgeting',
@@ -35,13 +28,6 @@ const features = [
   },
 ];
 
-/**
- * FeaturesSection shows a collection of core benefits for the assistant.  It
- * uses GSAP’s ScrollTrigger to reveal each card as it enters the viewport.
- * The layout remains flexible across breakpoints, and each card is set up
- * for future additions by modifying the features array above.  By keeping
- * the component simple and declarative we make it easier to maintain.
- */
 const FeaturesSection = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);

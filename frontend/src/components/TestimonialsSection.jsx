@@ -2,13 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-/**
- * TestimonialsSection displays quotes from satisfied users to build trust.
- * Cards animate into view on scroll.  You can expand the testimonials
- * array with additional feedback entries.  Each testimonial contains a
- * quote and the author name.  For more realism you could include
- * avatars or star ratings.
- */
 const testimonials = [
   {
     quote:
