@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
         {/* Clicking the brand returns to the home route without a full reload */}
         <Link to="/" className="text-2xl font-bold text-indigo-600">
-          FinanceAI
+          FinTrackAI
         </Link>
         <ul className="flex space-x-6 text-gray-700 font-medium">
           {navLinks.map((link) => (
